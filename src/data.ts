@@ -252,121 +252,391 @@ export const REVIEWS_LIST: ReviewItem[] = [
   }
 ];
 
-// Generates 64 beautiful high-quality gallery items (62+ photos)
-// Easy to customize or replace by editing this array.
-// Utilizing high-resolution imagery related to lighting, electrical, architecture, tools, wires, and modern homes.
+// Generates 64 electrical showroom gallery images using online image sources.
+// These are all relevant to electrical items, lighting, switches, wires, and accessories.
 export const GALLERY_IMAGES: GalleryItem[] = [
   {
     id: "gal1",
-    url: "/src/assets/images/showroom_hero_1783669786547.jpg",
-    title: "Main Showroom View",
+    url: "https://source.unsplash.com/800x600/?electrical,store&sig=1",
+    title: "Electrical Storefront Display",
     category: "showroom"
   },
   {
     id: "gal2",
-    url: "/src/assets/images/led_lights_display_1783669802665.jpg",
-    title: "Premium LED Lighting Collection",
-    category: "lighting"
+    url: "https://source.unsplash.com/800x600/?electrical,showroom&sig=2",
+    title: "Showroom Product Layout",
+    category: "showroom"
   },
   {
     id: "gal3",
-    url: "/src/assets/images/modular_switches_display_1783669823563.jpg",
-    title: "Designer Modular Switches",
-    category: "switches"
+    url: "https://source.unsplash.com/800x600/?electrical,service&sig=3",
+    title: "Customer Service Counter",
+    category: "showroom"
   },
   {
     id: "gal4",
-    url: "https://images.unsplash.com/photo-1558211583-d26f610c1eb1?auto=format&fit=crop&w=800&q=80",
-    title: "Warm Hanging Filament Bulbs",
+    url: "https://source.unsplash.com/800x600/?led,lighting&sig=4",
+    title: "LED Lighting Display",
     category: "lighting"
   },
   {
     id: "gal5",
-    url: "https://images.unsplash.com/photo-1565538810844-16be35c2f146?auto=format&fit=crop&w=800&q=80",
-    title: "Copper Cabling Core",
-    category: "wires"
+    url: "https://source.unsplash.com/800x600/?light,bulb&sig=5",
+    title: "Modern LED Bulb Collection",
+    category: "lighting"
   },
   {
     id: "gal6",
-    url: "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=800&q=80",
-    title: "Modern Recessed Panel Lights",
+    url: "https://source.unsplash.com/800x600/?lighting,fixtures&sig=6",
+    title: "Decorative Lighting Fixtures",
     category: "lighting"
   },
   {
     id: "gal7",
-    url: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-    title: "Industrial Distribution Board Panel",
-    category: "showroom"
+    url: "https://source.unsplash.com/800x600/?switches,sockets&sig=7",
+    title: "Modular Switches Display",
+    category: "switches"
   },
   {
     id: "gal8",
-    url: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80",
-    title: "Elegant Table Lamps & Sconces",
-    category: "lighting"
+    url: "https://source.unsplash.com/800x600/?switches,panel&sig=8",
+    title: "Electrical Switch Panel",
+    category: "switches"
   },
   {
     id: "gal9",
-    url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80",
-    title: "Premium Metallic Modular Sockets",
+    url: "https://source.unsplash.com/800x600/?switch,metal&sig=9",
+    title: "Premium Wall Switches",
     category: "switches"
   },
   {
     id: "gal10",
-    url: "https://images.unsplash.com/photo-1606166325012-909ff7a66e47?auto=format&fit=crop&w=800&q=80",
-    title: "Safety MCB Breaker Switches",
-    category: "accessories"
+    url: "https://source.unsplash.com/800x600/?cables,wires&sig=10",
+    title: "Copper Cable Bundles",
+    category: "wires"
   },
   {
     id: "gal11",
-    url: "https://images.unsplash.com/photo-1617104551722-3b2d51366400?auto=format&fit=crop&w=800&q=80",
-    title: "Heavy-Duty Cable Rolls",
+    url: "https://source.unsplash.com/800x600/?cable,coil&sig=11",
+    title: "High-Gauge Wire Rolls",
     category: "wires"
   },
   {
     id: "gal12",
-    url: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
-    title: "Crystal Chandelier Luminaire",
-    category: "lighting"
+    url: "https://source.unsplash.com/800x600/?wire,installation&sig=12",
+    title: "Wiring Installation Supplies",
+    category: "wires"
   },
   {
     id: "gal13",
-    url: "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=800&q=80",
-    title: "Concealed Conduit Accessories",
+    url: "https://source.unsplash.com/800x600/?electrical,tools&sig=13",
+    title: "Electrician Tool Kit",
     category: "accessories"
   },
   {
     id: "gal14",
-    url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-    title: "Interior Ceiling Lighting Setup",
-    category: "showroom"
+    url: "https://source.unsplash.com/800x600/?circuit,breaker&sig=14",
+    title: "Circuit Breaker Equipment",
+    category: "accessories"
   },
   {
     id: "gal15",
-    url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-    title: "Smart Automation Interfaces",
+    url: "https://source.unsplash.com/800x600/?plugs,sockets&sig=15",
+    title: "Modern Wall Sockets",
     category: "switches"
   },
   {
     id: "gal16",
-    url: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
-    title: "Home Utility Electronic Units",
+    url: "https://source.unsplash.com/800x600/?power,cables&sig=16",
+    title: "Power Cable Supplies",
+    category: "wires"
+  },
+  {
+    id: "gal17",
+    url: "https://source.unsplash.com/800x600/?switch,box&sig=17",
+    title: "Switchboard Enclosure",
+    category: "switches"
+  },
+  {
+    id: "gal18",
+    url: "https://source.unsplash.com/800x600/?led,panel&sig=18",
+    title: "LED Panel Lights",
+    category: "lighting"
+  },
+  {
+    id: "gal19",
+    url: "https://source.unsplash.com/800x600/?electrical,display&sig=19",
+    title: "Showroom Product Display",
+    category: "showroom"
+  },
+  {
+    id: "gal20",
+    url: "https://source.unsplash.com/800x600/?wire,spools&sig=20",
+    title: "Wire Spools and Rolls",
+    category: "wires"
+  },
+  {
+    id: "gal21",
+    url: "https://source.unsplash.com/800x600/?lighting,led&sig=21",
+    title: "Energy Efficient LEDs",
+    category: "lighting"
+  },
+  {
+    id: "gal22",
+    url: "https://source.unsplash.com/800x600/?electrical,storefront&sig=22",
+    title: "Electrical Store Exterior",
+    category: "showroom"
+  },
+  {
+    id: "gal23",
+    url: "https://source.unsplash.com/800x600/?outlet,plug&sig=23",
+    title: "Bi-directional Electrical Plugs",
+    category: "switches"
+  },
+  {
+    id: "gal24",
+    url: "https://source.unsplash.com/800x600/?breaker,board&sig=24",
+    title: "Safety Breaker Panel",
     category: "accessories"
   },
-  // Additional items to reach over 62 photos seamlessly
-  ...Array.from({ length: 48 }, (_, i) => {
-    const seeds = [
-      { cat: 'lighting', term: 'lighting', title: 'Designer Chandelier' },
-      { cat: 'switches', term: 'switch', title: 'Modular Key Plates' },
-      { cat: 'wires', term: 'cable', title: 'High-Gauge Copper Roll' },
-      { cat: 'accessories', term: 'electrician', title: 'Professional Safety Tools' },
-      { cat: 'showroom', term: 'showroom', title: 'Store Display Counter' }
-    ];
-    const selection = seeds[i % seeds.length];
-    return {
-      id: `gal-gen-${i}`,
-      url: `https://picsum.photos/seed/elec-${i + 20}/800/600`,
-      title: `${selection.title} (Stock Unit ${i + 1})`,
-      category: selection.cat as any
-    };
-  })
+  {
+    id: "gal25",
+    url: "https://source.unsplash.com/800x600/?electrical,insulation&sig=25",
+    title: "Wire Insulation Materials",
+    category: "wires"
+  },
+  {
+    id: "gal26",
+    url: "https://source.unsplash.com/800x600/?store,interior&sig=26",
+    title: "Shop Interior Lighting",
+    category: "showroom"
+  },
+  {
+    id: "gal27",
+    url: "https://source.unsplash.com/800x600/?led,tube&sig=27",
+    title: "LED Tube Lights",
+    category: "lighting"
+  },
+  {
+    id: "gal28",
+    url: "https://source.unsplash.com/800x600/?switchboard,controls&sig=28",
+    title: "Electrical Control Switches",
+    category: "switches"
+  },
+  {
+    id: "gal29",
+    url: "https://source.unsplash.com/800x600/?cable,tray&sig=29",
+    title: "Cable Management Trays",
+    category: "wires"
+  },
+  {
+    id: "gal30",
+    url: "https://source.unsplash.com/800x600/?tools,electrician&sig=30",
+    title: "Electrician Tools and Accessories",
+    category: "accessories"
+  },
+  {
+    id: "gal31",
+    url: "https://source.unsplash.com/800x600/?lighting,store&sig=31",
+    title: "Lighting Display Shelf",
+    category: "lighting"
+  },
+  {
+    id: "gal32",
+    url: "https://source.unsplash.com/800x600/?electrical,fixtures&sig=32",
+    title: "Fixture and Frame Display",
+    category: "showroom"
+  },
+  {
+    id: "gal33",
+    url: "https://source.unsplash.com/800x600/?plugs,switches&sig=33",
+    title: "Socket and Switch Combo",
+    category: "switches"
+  },
+  {
+    id: "gal34",
+    url: "https://source.unsplash.com/800x600/?power,distribution&sig=34",
+    title: "Power Distribution Accessories",
+    category: "accessories"
+  },
+  {
+    id: "gal35",
+    url: "https://source.unsplash.com/800x600/?cable,installation&sig=35",
+    title: "Installed CAT Cable Run",
+    category: "wires"
+  },
+  {
+    id: "gal36",
+    url: "https://source.unsplash.com/800x600/?display,lights&sig=36",
+    title: "Decorative Lighting Display",
+    category: "lighting"
+  },
+  {
+    id: "gal37",
+    url: "https://source.unsplash.com/800x600/?electrical,corridor&sig=37",
+    title: "Showroom Aisle Display",
+    category: "showroom"
+  },
+  {
+    id: "gal38",
+    url: "https://source.unsplash.com/800x600/?switch,plate&sig=38",
+    title: "Modern Switch Plates",
+    category: "switches"
+  },
+  {
+    id: "gal39",
+    url: "https://source.unsplash.com/800x600/?breaker,switch&sig=39",
+    title: "MCB and Circuit Protection",
+    category: "accessories"
+  },
+  {
+    id: "gal40",
+    url: "https://source.unsplash.com/800x600/?wiring,job&sig=40",
+    title: "Professional Wiring Setup",
+    category: "wires"
+  },
+  {
+    id: "gal41",
+    url: "https://source.unsplash.com/800x600/?lighting,fixture&sig=41",
+    title: "Architectural Lighting Fixtures",
+    category: "lighting"
+  },
+  {
+    id: "gal42",
+    url: "https://source.unsplash.com/800x600/?electrical,market&sig=42",
+    title: "Busy Electrical Market Shop",
+    category: "showroom"
+  },
+  {
+    id: "gal43",
+    url: "https://source.unsplash.com/800x600/?socket,wall&sig=43",
+    title: "Wall Socket Options",
+    category: "switches"
+  },
+  {
+    id: "gal44",
+    url: "https://source.unsplash.com/800x600/?connectors,terminals&sig=44",
+    title: "Electrical Connectors and Terminals",
+    category: "accessories"
+  },
+  {
+    id: "gal45",
+    url: "https://source.unsplash.com/800x600/?electric,wire&sig=45",
+    title: "Residential Wire Supply",
+    category: "wires"
+  },
+  {
+    id: "gal46",
+    url: "https://source.unsplash.com/800x600/?light,ceiling&sig=46",
+    title: "Ceiling Light Fixtures",
+    category: "lighting"
+  },
+  {
+    id: "gal47",
+    url: "https://source.unsplash.com/800x600/?electrical,shelf&sig=47",
+    title: "Shelf of Electrical Products",
+    category: "showroom"
+  },
+  {
+    id: "gal48",
+    url: "https://source.unsplash.com/800x600/?switches,modern&sig=48",
+    title: "Contemporary Switch Collection",
+    category: "switches"
+  },
+  {
+    id: "gal49",
+    url: "https://source.unsplash.com/800x600/?tools,electric&sig=49",
+    title: "Quality Electrician Equipment",
+    category: "accessories"
+  },
+  {
+    id: "gal50",
+    url: "https://source.unsplash.com/800x600/?cable,spool&sig=50",
+    title: "Power Cable Spools",
+    category: "wires"
+  },
+  {
+    id: "gal51",
+    url: "https://source.unsplash.com/800x600/?light,best&sig=51",
+    title: "High-Intensity Lighting",
+    category: "lighting"
+  },
+  {
+    id: "gal52",
+    url: "https://source.unsplash.com/800x600/?electrical,shop&sig=52",
+    title: "Electrical Shop Interior",
+    category: "showroom"
+  },
+  {
+    id: "gal53",
+    url: "https://source.unsplash.com/800x600/?switches,lighting&sig=53",
+    title: "Switches for Lighting Control",
+    category: "switches"
+  },
+  {
+    id: "gal54",
+    url: "https://source.unsplash.com/800x600/?meter,electric&sig=54",
+    title: "Electrical Metering Units",
+    category: "accessories"
+  },
+  {
+    id: "gal55",
+    url: "https://source.unsplash.com/800x600/?cable,connectors&sig=55",
+    title: "Cable and Connector Supplies",
+    category: "wires"
+  },
+  {
+    id: "gal56",
+    url: "https://source.unsplash.com/800x600/?lighting,diffuser&sig=56",
+    title: "Diffused LED Lighting",
+    category: "lighting"
+  },
+  {
+    id: "gal57",
+    url: "https://source.unsplash.com/800x600/?electrical,hardware&sig=57",
+    title: "Electrical Hardware Shelves",
+    category: "accessories"
+  },
+  {
+    id: "gal58",
+    url: "https://source.unsplash.com/800x600/?switch,installation&sig=58",
+    title: "Electrical Switch Installation",
+    category: "switches"
+  },
+  {
+    id: "gal59",
+    url: "https://source.unsplash.com/800x600/?cable,repair&sig=59",
+    title: "Cable Repair and Joining",
+    category: "wires"
+  },
+  {
+    id: "gal60",
+    url: "https://source.unsplash.com/800x600/?lighting,fixtures,outdoor&sig=60",
+    title: "Outdoor Lighting Fixtures",
+    category: "lighting"
+  },
+  {
+    id: "gal61",
+    url: "https://source.unsplash.com/800x600/?display,electrical&sig=61",
+    title: "Electrical Product Showcase",
+    category: "showroom"
+  },
+  {
+    id: "gal62",
+    url: "https://source.unsplash.com/800x600/?outlet,charger&sig=62",
+    title: "Modern Charging Outlets",
+    category: "switches"
+  },
+  {
+    id: "gal63",
+    url: "https://source.unsplash.com/800x600/?electrical,installation&sig=63",
+    title: "Installation Accessories",
+    category: "accessories"
+  },
+  {
+    id: "gal64",
+    url: "https://source.unsplash.com/800x600/?power,wiring&sig=64",
+    title: "Electrical Wiring Solutions",
+    category: "wires"
+  }
 ];
