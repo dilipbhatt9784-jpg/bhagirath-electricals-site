@@ -1,0 +1,6 @@
+{
+  "name": "Bhagirath Electricals",
+  "description": "Premium responsive business website for Bhagirath Electricals (भागीरथ इलेक्ट्रिकल्स) - Raipur's trusted electrical supply store.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
