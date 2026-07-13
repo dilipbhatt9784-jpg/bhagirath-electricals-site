@@ -270,11 +270,6 @@ export const REVIEWS_LIST: ReviewItem[] = [
 // Generates 64 electrical showroom gallery images using online image sources.
 // These are all relevant to electrical items, lighting, switches, wires, and accessories.
 const localGalleryAssets = [
-  { url: showroomImage, category: 'showroom', title: 'Store Display' },
-  { url: ledLightsImage, category: 'lighting', title: 'Lighting Product' },
-  { url: modularSwitchesImage, category: 'switches', title: 'Switch Panel' },
-  { url: showroomImage, category: 'wires', title: 'Wire Rolls' },
-  { url: ledLightsImage, category: 'accessories', title: 'Accessory Set' },
   { url: switchSocket1, category: 'switches', title: 'Switch & Socket 1' },
   { url: switchSocket2, category: 'switches', title: 'Switch & Socket 2' },
   { url: switchSocket3, category: 'switches', title: 'Switch & Socket 3' },
@@ -286,7 +281,12 @@ const localGalleryAssets = [
   { url: switchSocket9, category: 'switches', title: 'Switch & Socket 9' },
   { url: switchSocket10, category: 'switches', title: 'Switch & Socket 10' },
   { url: switchSocket11, category: 'switches', title: 'Switch & Socket 11' },
-  { url: switchSocket12, category: 'switches', title: 'Switch & Socket 12' }
+  { url: switchSocket12, category: 'switches', title: 'Switch & Socket 12' },
+  { url: modularSwitchesImage, category: 'switches', title: 'Switch Panel' },
+  { url: showroomImage, category: 'showroom', title: 'Store Display' },
+  { url: ledLightsImage, category: 'lighting', title: 'Lighting Product' },
+  { url: showroomImage, category: 'wires', title: 'Wire Rolls' },
+  { url: ledLightsImage, category: 'accessories', title: 'Accessory Set' }
 ];
 
 export const GALLERY_IMAGES: GalleryItem[] = Array.from({ length: 64 }, (_, index) => {
