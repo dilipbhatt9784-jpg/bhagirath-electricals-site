@@ -29,12 +29,14 @@ export default function Gallery() {
     : GALLERY_IMAGES.filter(img => img.category === activeTab);
 
   // Paginated items shown on screen
-  const visibleImages = filteredGallery.slice(0, visibleCount);
+  const displayedImages = filteredGallery.slice(0, visibleCount);
+  const featuredImages = activeTab === 'switches' ? displayedImages.slice(0, 4) : [];
+  const gridImages = activeTab === 'switches' ? displayedImages.slice(4) : displayedImages;
 
   // Lightbox handlers
   const openLightbox = (index: number) => {
     // Find the original index of this visible image inside the full filtered list
-    const selectedItem = visibleImages[index];
+    const selectedItem = displayedImages[index];
     const actualIndex = filteredGallery.findIndex(item => item.id === selectedItem.id);
     setLightboxIndex(actualIndex !== -1 ? actualIndex : index);
   };
@@ -60,6 +62,48 @@ export default function Gallery() {
   const handleLoadMore = () => {
     setVisibleCount(prev => Math.min(prev + 12, filteredGallery.length));
   };
+
+  const renderGalleryCard = (img: GalleryItem, index: number) => (
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      key={img.id}
+      onClick={() => openLightbox(index)}
+      className="group relative aspect-square rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
+    >
+      {/* Product Photo */}
+      <img
+        src={img.url}
+        alt={img.title}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        onError={(e) => {
+          const target = e.currentTarget as HTMLImageElement;
+          if (target.src !== GALLERY_IMAGES[0].url) {
+            target.src = GALLERY_IMAGES[0].url;
+          }
+        }}
+      />
+      
+      {/* Dark Hover Overlay */}
+      <div className="absolute inset-0 bg-blue-950/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+        <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+          <Eye className="h-4.5 w-4.5" />
+        </div>
+        <div className="space-y-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <span className="text-[10px] bg-amber-400 text-blue-950 font-extrabold uppercase px-2 py-0.5 rounded tracking-widest leading-none">
+            {img.category === 'lighting' ? 'LED & Lighting' : img.category}
+          </span>
+          <h4 className="font-sans font-extrabold text-white text-sm sm:text-base leading-snug uppercase tracking-wide">
+            {img.title}
+          </h4>
+        </div>
+      </div>
+    </motion.div>
+  );
 
   return (
     <section id="gallery" className="py-24 bg-white relative overflow-hidden">
@@ -110,49 +154,27 @@ export default function Gallery() {
           })}
         </div>
 
+        {/* Featured row for switches & sockets */}
+        {activeTab === 'switches' && featuredImages.length > 0 && (
+          <div className="mb-8 rounded-3xl border border-slate-200 bg-slate-50/70 p-4 sm:p-6 shadow-sm">
+            <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600">Featured collection</p>
+                <h3 className="text-xl font-black uppercase tracking-wide text-blue-900">Switches & Sockets</h3>
+              </div>
+              <div className="rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
+                Premium range
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+              {featuredImages.map((img, index) => renderGalleryCard(img, index))}
+            </div>
+          </div>
+        )}
+
         {/* Grid Display */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {visibleImages.map((img, index) => (
-            <motion.div
-              layout
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              key={img.id}
-              onClick={() => openLightbox(index)}
-              className="group relative aspect-square rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm hover:shadow-2xl cursor-pointer transition-all duration-300"
-            >
-              {/* Product Photo */}
-              <img
-                src={img.url}
-                alt={img.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  if (target.src !== GALLERY_IMAGES[0].url) {
-                    target.src = GALLERY_IMAGES[0].url;
-                  }
-                }}
-              />
-              
-              {/* Dark Hover Overlay */}
-              <div className="absolute inset-0 bg-blue-950/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full text-white transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <Eye className="h-4.5 w-4.5" />
-                </div>
-                <div className="space-y-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-[10px] bg-amber-400 text-blue-950 font-extrabold uppercase px-2 py-0.5 rounded tracking-widest leading-none">
-                    {img.category === 'lighting' ? 'LED & Lighting' : img.category}
-                  </span>
-                  <h4 className="font-sans font-extrabold text-white text-sm sm:text-base leading-snug uppercase tracking-wide">
-                    {img.title}
-                  </h4>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+          {gridImages.map((img, index) => renderGalleryCard(img, activeTab === 'switches' ? index + 4 : index))}
         </div>
 
         {/* Pagination Trigger: Load More */}
