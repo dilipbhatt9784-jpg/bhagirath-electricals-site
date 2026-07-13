@@ -7,6 +7,18 @@ import { BusinessInfo, ProductItem, ReviewItem, GalleryItem } from './types';
 import showroomImage from './assets/images/showroom_hero_1783669786547.jpg';
 import ledLightsImage from './assets/images/led_lights_display_1783669802665.jpg';
 import modularSwitchesImage from './assets/images/modular_switches_display_1783669823563.jpg';
+import switchSocket1 from './assets/images/switch-socket-1.jpeg';
+import switchSocket2 from './assets/images/switch-socket-2.jpeg';
+import switchSocket3 from './assets/images/switch-socket-3.jpeg';
+import switchSocket4 from './assets/images/switch-socket-4.jpeg';
+import switchSocket5 from './assets/images/switch-socket-5.jpeg';
+import switchSocket6 from './assets/images/switch-socket-6.jpeg';
+import switchSocket7 from './assets/images/switch-socket-7.jpeg';
+import switchSocket8 from './assets/images/switch-socket-8.jpeg';
+import switchSocket9 from './assets/images/switch-socket-9.jpeg';
+import switchSocket10 from './assets/images/switch-socket-10.jpeg';
+import switchSocket11 from './assets/images/switch-socket-11.jpeg';
+import switchSocket12 from './assets/images/switch-socket-12.jpeg';
 
 export const BUSINESS_DETAILS: BusinessInfo = {
   name: "Bhagirath Electricals",
@@ -262,7 +274,19 @@ const localGalleryAssets = [
   { url: ledLightsImage, category: 'lighting', title: 'Lighting Product' },
   { url: modularSwitchesImage, category: 'switches', title: 'Switch Panel' },
   { url: showroomImage, category: 'wires', title: 'Wire Rolls' },
-  { url: ledLightsImage, category: 'accessories', title: 'Accessory Set' }
+  { url: ledLightsImage, category: 'accessories', title: 'Accessory Set' },
+  { url: switchSocket1, category: 'switches', title: 'Switch & Socket 1' },
+  { url: switchSocket2, category: 'switches', title: 'Switch & Socket 2' },
+  { url: switchSocket3, category: 'switches', title: 'Switch & Socket 3' },
+  { url: switchSocket4, category: 'switches', title: 'Switch & Socket 4' },
+  { url: switchSocket5, category: 'switches', title: 'Switch & Socket 5' },
+  { url: switchSocket6, category: 'switches', title: 'Switch & Socket 6' },
+  { url: switchSocket7, category: 'switches', title: 'Switch & Socket 7' },
+  { url: switchSocket8, category: 'switches', title: 'Switch & Socket 8' },
+  { url: switchSocket9, category: 'switches', title: 'Switch & Socket 9' },
+  { url: switchSocket10, category: 'switches', title: 'Switch & Socket 10' },
+  { url: switchSocket11, category: 'switches', title: 'Switch & Socket 11' },
+  { url: switchSocket12, category: 'switches', title: 'Switch & Socket 12' }
 ];
 
 export const GALLERY_IMAGES: GalleryItem[] = Array.from({ length: 64 }, (_, index) => {
