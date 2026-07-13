@@ -4,6 +4,9 @@
  */
 
 import { BusinessInfo, ProductItem, ReviewItem, GalleryItem } from './types';
+import showroomImage from './assets/images/showroom_hero_1783669786547.jpg';
+import ledLightsImage from './assets/images/led_lights_display_1783669802665.jpg';
+import modularSwitchesImage from './assets/images/modular_switches_display_1783669823563.jpg';
 
 export const BUSINESS_DETAILS: BusinessInfo = {
   name: "Bhagirath Electricals",
@@ -254,24 +257,21 @@ export const REVIEWS_LIST: ReviewItem[] = [
 
 // Generates 64 electrical showroom gallery images using online image sources.
 // These are all relevant to electrical items, lighting, switches, wires, and accessories.
-const galleryCategoryMeta = {
-  showroom: { query: 'electrical,shop', title: 'Store Display' },
-  lighting: { query: 'lighting,led', title: 'Lighting Product' },
-  switches: { query: 'switches,sockets', title: 'Switch Panel' },
-  wires: { query: 'wires,cables', title: 'Wire Rolls' },
-  accessories: { query: 'electrical,tools', title: 'Accessory Set' }
-};
+const localGalleryAssets = [
+  { url: showroomImage, category: 'showroom', title: 'Store Display' },
+  { url: ledLightsImage, category: 'lighting', title: 'Lighting Product' },
+  { url: modularSwitchesImage, category: 'switches', title: 'Switch Panel' },
+  { url: showroomImage, category: 'wires', title: 'Wire Rolls' },
+  { url: ledLightsImage, category: 'accessories', title: 'Accessory Set' }
+];
 
 export const GALLERY_IMAGES: GalleryItem[] = Array.from({ length: 64 }, (_, index) => {
-  const categories = ['showroom', 'lighting', 'switches', 'wires', 'accessories'];
-  const category = categories[index % categories.length] as keyof typeof galleryCategoryMeta;
-  const item = galleryCategoryMeta[category];
-
+  const item = localGalleryAssets[index % localGalleryAssets.length];
   return {
     id: `gal${index + 1}`,
-    url: `https://loremflickr.com/800/600/${item.query}?lock=${index + 1}`,
-    title: `${item.title} ${Math.floor(index / categories.length) + 1}`,
-    category
+    url: item.url,
+    title: `${item.title} ${Math.floor(index / localGalleryAssets.length) + 1}`,
+    category: item.category as GalleryItem['category']
   };
 });
 

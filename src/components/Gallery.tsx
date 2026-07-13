@@ -129,6 +129,12 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (target.src !== GALLERY_IMAGES[0].url) {
+                    target.src = GALLERY_IMAGES[0].url;
+                  }
+                }}
               />
               
               {/* Dark Hover Overlay */}
